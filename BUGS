@@ -1,0 +1,9 @@
+
+* Doesn't check for unsaved data before loading or clearing.
+
+* The NumPad doesn't work on Win32. I'm not getting any UNICODE
+  from it either, so this could be an SDL issue, or something
+  with the Win2k box I tested on...
+
+* The song editor is repainted completely whenever the cursors
+  are moved. This burns quite a bit of power on slow machines.

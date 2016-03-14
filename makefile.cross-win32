@@ -1,0 +1,18 @@
+# Makefile to cross-compile a Win32 binary
+
+TOOLS =		/opt/xmingw/bin
+CC =		$(TOOLS)/i386-mingw32msvc-gcc
+CLIBS =		$(shell $(TOOLS)/sdl-config --libs)
+CFLAGS =	-O3 -Wall $(shell $(TOOLS)/sdl-config --cflags) -Wall -Werror
+
+HEADERS =	smixer.h sseq.h gui.h version.h
+SOURCES =	dt42.c smixer.c sseq.c gui.c
+
+all:		dt42.exe
+
+clean:
+		rm -f *.o
+		rm dt42.exe
+
+dt42.exe:	${SOURCES} ${HEADERS}
+		${CC} ${CFLAGS} -o dt42.exe ${SOURCES} ${CLIBS}

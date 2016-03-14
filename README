@@ -1,0 +1,37 @@
+
+		DT-42 DrumToy
+		-------------
+
+Although one can obviously create some sort of
+music with DT-42, it is just a toy. I decided
+to improve the simplemixer SDL audio programming
+example a little, moving the sequencer into the
+audio callback context and making things a bit
+more robust. The string based sequencer turned
+out to be fun - and then I was confronted with
+this audio/video sync issue. So, I had this idea
+of throwing in some sort of GUI with scopes a
+very simple tracker (MOD editor) style pattern
+editor, and...
+  Well, there you go - another SDL programming
+example that went rogue. :-D
+
+In short, DT-42 was intended as an example of
+interactive audio and graphics programming using
+SDL, but maybe it's a bit too complex. However,
+for someone working on some sort of music editor,
+DT-42 is probably as simple as it gets with all
+the basic vital stuff still in place.
+
+The sounds were sampled by Michael Fischer,
+from a real Roland TR-808 Rhythm Composer. (A
+vintage analog drum machine.) Please see
+README.SOUND for details. You may get the rest
+of the sounds from here:
+
+    http://freeware.sgi.com/fw-5.3/fw_TR808/
+
+Or just use Google, if that doesn't work.
+
+
+		David Olofson <david@olofson.net>

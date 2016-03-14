@@ -1,0 +1,79 @@
+	
+    Stuff to do, for those who have nothing better to do.
+    -----------------------------------------------------
+
+    DT-42 is just a fun hack, and I don't intend to turn
+    it into anything serious. The design is similar to
+    that of old pure assembly language trackers from the
+    Amiga days (that is, fast and simple, but inflexible),
+    and I did this deliberately, for fun, and to get this
+    running quickly with a minimum of dependencies.
+       You have been warned! :-D
+
+* Implement message logging!
+
+* Check for unsaved data before quitting!
+
+* Ask before overwriting files!
+
+* Cursor-tracks-play-position on/off switch!
+
+* Quantize! This is probably best done by hanging over the
+  responsibility to figure out where to put notes to the
+  sequencer when recording real time. Even though the GUI
+  does know (approximately), there are issues with loops,
+  jumps, the Z command and other things.
+
+* Have the sequencer send timestamped events to the GUI,
+  so the GUI can implement the latency compensation more
+  reliably. As it is, Jnnn and Z commands, and looping
+  throws it off sligthly.
+
+* Support for arbitrary display resolutions and window
+  resizing. This will require some cleaning up...
+
+* Backspace with selection should move subsequent notes up.
+
+* Meter bars should understand the Z command! (They should
+  skip too.)
+
+* Folding of Z'ed steps! (That is, in folded view mode, a
+  step is always one editor column wide. If there isn't
+  empty space following a visible note, it should be
+  marked somehow, to hint the hidden data.)
+
+* When recording, notes should be played by the GUI *or*
+  the sequencer - not both!
+
+* User defined samples. (Well, you *can* edit the Snn:
+  tags in the .dt42 files, but...)
+
+* A file selector would be nice...
+
+* Shuffle! How about an N length string of step offsets?
+  Trivial to parse and edit, and it should be trivial to
+  implement too, as the sequencer controls timing on a
+  step by step basis.
+
+* Send levels, master FX etc. Track FX?
+
+* Perlin noise humanizer! Same thing as shuffle, but
+  driven by real time generated offset data instead of an
+  offset table.
+
+* Support for arbitrary output sample rates. Requires
+  resampling of the samples. Bonus: Doing that in real
+  time makes it trivial to implement the 'pitch' parameter
+  for samples.
+
+* Make decay times and the like sample rate independent!
+
+* MIDI input. Probably best done entirely in the audio
+  thread context, to keep the GUI from interfering with
+  the timing.
+
+* Support for serious audio APIs. JACK, of course.
+
+* The GUI is not as efficient as it could be. For example,
+  the song editor is fully repainted whenever the cursors
+  are moved, which impacts slower computers quite a bit.

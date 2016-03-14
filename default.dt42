@@ -1,0 +1,21 @@
+DT42SONG1
+CREATOR:DT-42 DrumToy
+VERSION:0.1.0
+
+I0:808-bassdrum.wav
+I1:808-clap.wav
+I2:808-cowbell.wav
+I3:808-hihat.wav
+
+S4:fm2 31 .15 .2
+S5:fm2 29 .15 .2
+S6:fm2 28 .15 .2
+S7:fm2 26 .15 .2
+S8:fm2 24 .15 .2
+S9:fm2 23 .2 .2
+S10:fm2 21 .25 .2
+S11:fm2 19 .3 .2
+S12:fm2 17 .35 .2
+S13:fm2 16 .4 .2
+S14:fm2 14 .45 .2
+S15:fm2 12 .5 .2
