@@ -1,7 +1,7 @@
 /*
  * sseq.c - Very simple drum sequencer
  *
- * (C) David Olofson, 2003, 2006
+ * Copyright 2003, 2006, 2016 David Olofson
  */
 
 #include "sseq.h"
@@ -292,7 +292,7 @@ int _load_song(const char *fn)
 		return -1;
 	}
 	buf[size] = 0;		/* Safety NUL terminator */
-	if(fread(buf, size, 1, f) < 0)
+	if(fread(buf, size, 1, f) < 1)
 	{
 		fprintf(stderr, "Could not load song \"%s\": %s\n",
 				fn, strerror(errno));

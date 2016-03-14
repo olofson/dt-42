@@ -1,5 +1,5 @@
 CC =		gcc
-CLIBS =		$(shell sdl-config --libs) #-lefence
+CLIBS =		$(shell sdl-config --libs) -lm #-lefence
 CFLAGS =	-O3 -Wall $(shell sdl-config --cflags) -g -Wall -Werror
 
 HEADERS =	smixer.h sseq.h gui.h version.h

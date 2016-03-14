@@ -1,7 +1,7 @@
 /*
  * smixer.c - Very simple audio mixer for SDL
  *
- * (C) David Olofson, 2003, 2006
+ * Copyright 2003, 2006, 2016 David Olofson
  */
 
 #include <stdlib.h>
@@ -350,7 +350,7 @@ int sm_load_synth(int sound, const char *def)
 	int res = 0;
 	sm_unload(sound);
 	SDL_LockAudio();
-	sounds[sound].data = strdup(def);
+	sounds[sound].data = (Uint8 *)strdup(def);
 	if(strncmp(def, "fm2 ", 4) == 0)
 	{
 		if(sscanf(def, "fm2 %f %f %f",
